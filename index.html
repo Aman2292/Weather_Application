@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile" class="profile-pic">
+            </div>
+            <input type="text" class="search-bar" placeholder="Search for places ..." id="searchBar">
+
+            <div class="unit-toggle">
+                <button class="unit active" id="celsius">°C</button>
+                <button class="unit" id="fahrenheit">°F</button>
+            </div>
+        </header>
+        <main class="body">
+            <section class="current-weather" id="currentWeather">
+                <div class="weather-info-box">
+                    <div class="temperature" id="temperature">12°C</div>
+                    <div class="date-time" id="dateTime">Monday, 16:00</div>
+                    <div class="weather-description" id="weatherDescription">Mostly Cloudy</div>
+                    <div class="rain-chance" id="rainChance">Rain - 30%</div>
+                    <div class="location" id="location">New York, NY, USA</div>
+                </div>
+            </section>
+            <section class="forecast">
+                <div class="tabs">
+                    <button class="tab active" id="todayTab">Today</button>
+                    <button class="tab" id="weekTab">Week</button>
+                </div>
+                <div class="day-cards" id="dayCards">
+                    <!-- Placeholder cards for the week forecast -->
+                    <div class="day-card">
+                        <div class="day">Mon</div>
+                        <div class="icon"><i class="fas fa-cloud"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Tue</div>
+                        <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Wed</div>
+                        <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Thu</div>
+                        <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Fri</div>
+                        <div class="icon"><i class="fas fa-moon"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Sat</div>
+                        <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                    <div class="day-card">
+                        <div class="day">Sun</div>
+                        <div class="icon"><i class="fas fa-cloud-sun-rain"></i></div>
+                        <div class="temp-range">20°C - 15°C</div>
+                    </div>
+                </div>
+            </section>
+            <section class="highlights">
+                <h2>Today's Highlights</h2>
+                <div class="highlight-cards">
+                    <div class="highlight-card">
+                        <h3>UV Index</h3>
+                        <div class="uv-index" id="uvIndex"></div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Wind Status</h3>
+                        <div class="wind-status" id="windStatus">7.70 km/h WSW</div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Sunrise & Sunset</h3>
+                        <div class="sun-times" id="sunTimes">
+                            <div>6:35 AM</div>
+                            <div>5:42 PM</div>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Humidity</h3>
+                        <div class="humidity" id="humidity">12% <span>Normal</span></div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Visibility</h3>
+                        <div class="visibility" id="visibility">5.2 km <span>Average</span></div>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Air Quality</h3>
+                        <div class="air-quality" id="airQuality">105 <span>Unhealthy</span></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
